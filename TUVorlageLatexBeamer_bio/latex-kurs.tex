@@ -1,0 +1,231 @@
+%\documentclass[10pt,landscape,handout]{beamer}
+%\documentclass[10pt,landscape,draft]{beamer}
+\documentclass[10pt,landscape,xcolor=dvipsnames]{beamer}
+
+
+% Be able to directly input German Umlauts etc.
+%\usepackage[latin1]{inputenc}
+
+% Font encoding:
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{german}
+\usepackage{ragged2e}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{siunitx}
+
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+\definecolor{white}{rgb}{1.0,1.0,1.0}
+
+\newif\ifplacelogo % create a new conditional
+\placelogotrue
+
+\usepackage{units}
+\usepackage[absolute,verbose,overlay]{textpos}
+
+\newcommand{\poslogo}{%
+  \setlength{\TPHorizModule}{364pt}
+  \setlength{\TPVertModule}{273pt}}
+  
+
+
+
+% setup beamer style to use TUDo Theme
+\mode<presentation>
+{
+  \usetheme{TUDortmund}
+}
+
+% Include intermediate TOCs automatically.
+% Completely pointless for these slides, however
+%\AtBeginSection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{\"Ubersicht}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{}[frame number] 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Basic information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title[]{Transmissionselektronenmikroskopie}
+
+\subtitle{Soft Matter und Biophysik: Experiment und Theorie}
+
+\author{Markus Stabrin}
+
+\institute[Fakult\"at f\"ur Physik, TU Dortmund]{Fakult\"at f\"ur Physik\\ Technische Universit\"at Dortmund}
+\date{11. Dezember 2014}
+
+
+
+\begin{document}
+\setlength{\parskip}{1mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% use logo for title slide
+
+\logo{\ifplacelogo \fi}
+
+
+% slide options are: alignment: c(enter) or t(op), label
+%\afterpage{%
+\begin{frame}[c,label=titlepage]
+  \titlepage
+\end{frame}
+
+\placelogofalse
+\begin{frame}
+  \frametitle{Inhaltsübersicht}
+	\begin{minipage}{6cm}
+  \setcounter{tocdepth}{2}
+	\footnotesize{
+  \tableofcontents}
+	\end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Overview
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% turn off logo for remaining slides (just draws away focus from content)
+%\logo{}
+
+%\begin{frame}[t, label=overview]
+  %\frametitle{\"Ubersicht}
+  %\setcounter{tocdepth}{2}
+  %\tableofcontents
+%\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Global structure is declared through the usual section and 
+%%% subsection environments. Starred sections will not appear in the 
+%%% auto-generated TOCs.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{inhalt/geschichte.tex}
+\input{inhalt/prokontra.tex}
+\input{inhalt/proteine.tex}
+\input{inhalt/mikroskop.tex}
+\input{inhalt/kontrast.tex}
+\input{inhalt/epa.tex}
+
+
+%\begin{frame}[c]
+%\frametitle{Literatur}
+%\nocite{*}
+%\bibliographystyle{alphadin}
+%\bibliography{literatur}
+%\end{frame}
+
+\section*{Anhang}
+\begin{frame}
+\frametitle{Literaturverzeichnis}
+\vspace{0.2cm}
+\begin{thebibliography}{999}
+\tiny{
+\bibitem[]{} \textcolor{black}{\textsc{Li, X., Mooney, P., Zheng, S., Booth, C., Braunfeld, M., Gubbens, S., Agard,
+D., and Cheng, Y.}, \textit{'Electron counting and beam-induced motion correction enable
+near-atomic-resolution single-particle cryo-EM'}, Nature Methods, Vol. 10(6):584-593 (2013)}
+
+\bibitem[]{} \textcolor{black}{\textsc{Penczek, P.}, \textit{'Fundamentals of three-dimensional reconstruction from projections'}, Methods Enzymol, Vol. 482:1-33 (2010)} 
+
+\bibitem[]{} \textcolor{black}{\textsc{BR Doku}, \textit{'Meilensteine der Naturwissenschaft und Technik- Ernst Ruska und das Elektronenmikroskop'}} 
+
+\bibitem[]{} \textcolor{black}{\textsc{Dubochet, J.}, \textit{'Cryo-EM - the first thirty years'}, Journal of Microscopy, Vol. 245:221-224 Pt 3 (2012)} 
+
+\bibitem[]{} \textcolor{black}{\textsc{Scherzer, O.}, \textit{'The Theoretical Resolution Limit of the Electron Microscope'}, Journal of Applied Physics, Vol. 20:20 (1949)} 
+
+\bibitem[]{} \textcolor{black}{\textsc{Orlova, E.V., Saibil, H.R.}, \textit{'Structrue Analysis of Macromolecular Assemblies by Electron Microscopy'}, Chemical Reviews, Vol. 111:7710-7748 (2011)} 
+
+\bibitem[]{} \textcolor{black}{\textsc{Reimer, L., Kohl, H.}, \textit{'Transmission Electron Microscopy'}, Physiscs of Image Formation, Springer, Vol. 5 (2008), ISBN:978-0-387-40093-8} 
+}
+
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bilderverzeichnis}
+\begin{thebibliography}{999}
+\tiny{
+
+\bibitem[]{} \textcolor{black}{[Geschichte S.1] \textsc{}, \textit{'http://www.musoptin.com/literatur/zeiss\_1889\_stativIa\_1.jpg'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[Geschichte S.2] \textsc{}, \textit{'http://www.amuseum.de/MikSchaffhaus/Folie50.JPG'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[Geschichte S.4] \textsc{}, \textit{'http://www.jeolusa.com/portals/2/prodshots/EO/jem-3200fsc.jpg'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[Pro/Kontra S.2] \textsc{Reimer, L., Kohl, H.}, \textit{'Transmission Electron Microscopy'}, Physiscs of Image Formation, Springer, Vol.5:324 (2008), ISBN:978-0-387-40093-8} 
+
+\bibitem[]{} \textcolor{black}{[Pro/Kontra S.3] \textsc{}, \textit{'http://www.ana.unibe.ch/~exmo/bilder/figure3.jpg'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[Protein] \textsc{}, \textit{'http://upload.wikimedia.org/wikipedia/commons/2/20/Protein-Struktur.png'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[TEM S.1] \textsc{Reimer, L., Kohl, H.}, \textit{'Transmission Electron Microscopy'}, Physiscs of Image Formation, Springer, Vol.5:2 (2008), ISBN:978-0-387-40093-8} 
+
+\bibitem[]{} \textcolor{black}{[TEM S.2] \textsc{Reimer, L., Kohl, H.}, \textit{'Transmission Electron Microscopy'}, Physiscs of Image Formation, Springer, Vol.5:78 (2008), ISBN:978-0-387-40093-8} 
+
+\bibitem[]{} \textcolor{black}{[TEM S.3] \textsc{}, \textit{'http://www.ammrf.org.au/myscope/images/tem/tem\_magneticlens\_vs\_optical.png'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[TEM S.5] \textsc{}, \textit{'http://www.museum.kyushu-u.ac.jp/publications/PP/PP2002/06/06-e-1.jpg'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[TEM S.6] \textsc{}, \textit{'http://www.fei.com/uploadedImages/FEISite/Pages/Products/Specialty\_Products/Metrios/Models/falcon-II-CCD-CMOS\_003\_960x.png'}, 10.12.14}
+}
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bilderverzeichnis}
+\begin{thebibliography}{999}
+\tiny{
+\bibitem[]{} \textcolor{black}{[Kontrast S.2] \textsc{Behrmann, E.}, \textit{'Structure of the Actin/Tropomyosin/Myosin Rigor
+Complex as Revealed by Cryo-Electron Microscopy.'}, 2012} 
+
+\bibitem[]{} \textcolor{black}{[Kontrast S.6] \textsc{}, \textit{'https://www.mcb.ucdavis.edu/cryoem/images/tmvcns.jpg'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[EPA S.1 Oben] \textsc{Frank, J.}, \textit{'Single-particle imaging of macromolecules by cryo-electron microscopy'}, Annu Rev Biophys Biomol Struct, Vol.31:303-19 (2002)} 
+
+\bibitem[]{} \textcolor{black}{[EPA S.4] \textsc{Behrmann, E.}, \textit{'Structure of the Actin/Tropomyosin/Myosin Rigor
+Complex as Revealed by Cryo-Electron Microscopy.'}, 2012} 
+
+\bibitem[]{} \textcolor{black}{[EPA S.5] \textsc{}, \textit{'http://spr.math.princeton.edu/sites/spr.math.princeton.edu/files/u4/inversion.jpg'}, 10.12.14}
+
+\bibitem[]{} \textcolor{black}{[Anhang] \textsc{}, \textit{'http://labsoft.pl/wordpress/wp-content/uploads/2013/08/Titan-krios1.jpg'}, 10.12.14}
+}
+\end{thebibliography}
+\end{frame}
+
+%\input{topics/Anhang}
+
+
+\begin{frame}
+\hspace{3cm}
+	\begin{block}
+		\centering
+		\huge Vielen Dank für Ihre Aufmerksamkeit!
+	\end{block}
+	\begin{minipage}{4cm}
+		\begin{figure}
+			\includegraphics[height = 4cm]{pic/krios.png}
+		\end{figure}
+	\end{minipage}
+	\begin{minipage}{6cm}
+		\begin{figure}
+			\includegraphics[width = 6cm]{pic/bild18.png}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\end{document}

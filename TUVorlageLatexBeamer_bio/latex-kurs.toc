@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {1}{Geschichtlicher Verlauf}{3}{0}{1}
+\beamer@sectionintoc {2}{Pro/Kontra}{7}{0}{2}
+\beamer@sectionintoc {3}{R\IeC {\"u}ckblick Proteine}{10}{0}{3}
+\beamer@sectionintoc {4}{Transmissionenelektronenmikroskop}{11}{0}{4}
+\beamer@sectionintoc {5}{Kontrast}{19}{0}{5}
+\beamer@subsectionintoc {5}{1}{Kontrastentstehung}{19}{0}{5}
+\beamer@subsectionintoc {5}{2}{Kontrastierungsmethoden}{22}{0}{5}
+\beamer@sectionintoc {6}{Einzelpartikelanalyse}{25}{0}{6}
