@@ -1,0 +1,447 @@
+
+\section[Theoretische Modelle]{Die Theorie der Denaturierung}
+\setstretch{1}
+
+\subsection{Grundlagen}
+\begin{frame}
+\frametitle{Grundlagen der Standardmodelle}
+Die meisten Modelle bauen auf einem Basismodell ähnlich dem Isingmodell von B. H. Zimm auf (1960).\\
+\vspace{0.4cm}
+Verwendete Annahmen
+\begin{itemize}
+\item DNA als 1D Gitter aus N BP
+\item H-Brücken zwischen komplementären Basen
+\item Hydrophobe/ Stapelwechelwirkung zwischen nächsten Nachbarn
+\item Zwei Zustände für BP: gebunden / ungebunden
+%\item Berücksichtigung der Konfigurationsentropie und des Disszoziationsgleichgewichts
+\end{itemize}
+\end{frame}
+
+\subsection{Basenpaar-Modell}
+\begin{frame}
+\frametitle{Basenpaar-Modell}
+\begin{minipage}{5.2cm}
+\setstretch{1}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=5.0cm]{pic/BPModell.jpg}
+\end{figure}
+\centering
+\tiny\cite{GOT83}
+\end{minipage}
+\begin{minipage}{5.0cm}
+\setstretch{1}
+\small{
+\begin{itemize}
+\item Nummerierung der BP vom 5' zum 3' Ende
+\item Beschreibung durch einen N-Dimensionalen Vektor $\vec{c}$ 
+\item BP: offen 0, geschlossen 1
+\end{itemize}
+}
+\end{minipage}
+\vspace{0.2cm}
+\setstretch{1}
+Zustandsumme $Z_c$ ist das Produkt der Stapilitätsparameter $s_k$ und Loop-Gewichtungsfaktoren $\sigma_l$.
+Faktoren werden nach folgenden Regeln verwendet.
+\begin{itemize}
+\item Gebundenes k-tes BP $\Rightarrow\, s_k$
+\item Innerer Loop mit l ungebundenen BP $\Rightarrow\, \sigma_l$
+\item Gewichtung 1 für die Enden der Kette (keine freie Energie).
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{\large Freie Energie und Wahrscheinlichkeiten}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%POSITION DER FOLIE?? ETWAS NICHTSSAGEND?\\
+%Freie Energie
+%\begin{align*}
+%F_c=-\text{R}T\ln(Z_c)
+%\end{align*}
+%Wahrscheinlichkeit der Konfiguration $c$
+%\begin{align*}
+%P_c=\frac{Z_c}{\sum Z_c}
+%\end{align*}
+
+%Helizität einer Doppelhelix mit $N_c(1)$ gebundenen BP
+% \begin{align*}
+%\Theta= \frac{\sum N_c(1) Z_c}{\sum Z_c}
+%\end{align*}
+%\end{frame}
+
+
+\subsection{Stacking-Modell}
+\begin{frame}
+\frametitle{Stacking-Modell}
+\small Die dominante, strukturgebende WW der DNA ist die Stacking-WW \\
+\centering{ $\Rightarrow$ anpassen des Modells.}\\
+\begin{minipage}{5.2cm}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=5.0cm]{pic/STModell.jpg}
+\end{figure}
+\centering
+\tiny\cite{GOT83}
+\end{minipage}
+\begin{minipage}{5.0cm}
+\small{
+\begin{itemize}
+\item Jedem BP Doublet wird ein Stabilitätsparamter zugewiesen
+\item Beschreibung durch einen N-1-Dimensionalen Vektor $\vec{c}$
+\item WW zwischen Doublet $\hat{=}$ stacked
+\item stacked 1 / unstacked 0
+\end{itemize}
+}
+\end{minipage}
+
+\begin{flushleft}
+Regeln der Zustandssumme können übernommen werden, mit
+\begin{itemize}
+\item $l$ = \# unstacked Doublets= \# offene BP + 1
+\item $k$ = Doublet aus k-tem und (k+1)sten BP
+\end{itemize}
+\end{flushleft}
+\end{frame}
+
+\subsection{Das Parameterproblem}
+\begin{frame}
+\frametitle{Das Parameterproblem}
+
+\textbf{Stabilitätsparameter} des Basenpaars MN
+\begin{align*}
+s_k=s_{MN}=\exp\left(-\frac{\Delta H_{MN}-T\Delta S_{MN}}{\text{R}T}\right)
+\end{align*}
+\begin{itemize}
+\item Die Entropie $\Delta S_{MN}$ und Enthalpie $\Delta H_{MN}$ werden als konstant angenommen
+\item Kalorische Messungen zeigten $\Delta S_{MN}\approx \Delta S \approx \text{const}$
+\item Relevanter Parameter ist die Schmelztemperatur $T_{MN}=\frac{\Delta H_{MN}}{\Delta S}$
+\end{itemize}
+\vspace{0.4cm}
+Vereinfachende Annahme $T_{MN}=T_{NM}$, und $T_{MN}=(T_M+T_N)/2$\\
+$\Rightarrow$ Zwei unabhängige Parameter, da $T_A=T_T$ und $T_G=T_C$\\
+\vspace{0.3cm}
+Bestimmung von $T_A$ und $T_G$ aus Modell DNA mit 100\% AT / GC BP.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Das Parameter Problem}
+\textbf{Loop gewichtende Faktoren}
+\begin{itemize}
+\item müssen von der Loop-Entropie abhängen
+\item sollten für innere Loops < 1 sein (weniger Freiheitsgrade)
+\item Fallende Funktion, aber langsamer als $\exp(-l)$
+\item müssen mit der Ionenstärke abnehmen
+\item müssen mit der experimentell beobachten Steifheit der Helix einhergehen
+\end{itemize}
+\vspace{0.3cm}
+\centering
+$\Rightarrow$ Kein Beweis für die genaue funktionale Form von $\sigma_l$\\
+Meinungen gehen stark auseinander!
+\vspace{0.2cm}
+\textcolor{YellowGreen}{
+\small{
+\begin{align*}
+\sigma_l=\sigma_0 \lambda_l \epsilon_l \; \text{?} \qquad \sigma_l=\sigma_0\Psi_l\cdot\frac{l\cdot c_l}{c_\infty}\; \text{?}\qquad \sigma_l=\sigma_0 l^{-c}\;\text{?}\qquad \sigma_l=\sigma_0 (l-d)^{-c}\;\text{?}
+\end{align*}}}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Das Parameter Problem}
+Bereits bei diesem einfachen Modell mussten \textcolor{YellowGreen}{sehr viele Annahmen} gemacht werden. \\
+\vspace{0.2cm}
+Bei komplexeren Betrachtungen, welche beispielsweise
+\begin{itemize}
+\item Die Zustandssumme in eine Interne und Externe aufspalten.
+\item Die Abhängigkeit von Molekülmasse und Form berücksichtigen. 
+\item Heterogenitäten der Sequenz berücksichtigen. 
+\item Änderung von Translations- und Rotationsfreiheitsgraden betrachten.
+\item Die Loop-Entropie als zustätzlichen Parameter einführen.
+\end{itemize}
+\vspace{0.2cm}
+werden die Meinungsverschiedenheiten und Unsicherheiten der Theorien nur größer.
+\end{frame}
+
+\subsection{Vergleich Theorie \& Experiment}
+\begin{frame}
+\frametitle{Vergleich mit Messdaten}
+\small Unterscheidung zwischen langer >1000 BP  und kurzer <600 BP DNA ist nötig.\\
+\begin{minipage}{5.2cm}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=6.0cm]{pic/EXPlang.jpg}
+\end{figure}
+\centering
+\tiny\cite{WAR85}
+\end{minipage}
+\hfill
+\begin{minipage}{5.2cm}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=3.5cm]{pic/EXPkurz.jpg}
+\end{figure}
+\centering
+\tiny\cite{WAR85}
+\end{minipage}
+\centering
+Woran liegen die Abweichungen??
+\end{frame}
+
+\begin{frame}
+\frametitle{Hysterese}
+Mögliche Ursache: Theorien berechnen Gleichgewichtsschmelzkurven\\
+\vspace{0.2cm}
+\begin{block}{Hysterese- Effekt}
+Teilweise denaturierte DNA zeigt Irreversibilitäten in ihren Schmelzkurven,
+ wenn mit der gleichen Rate gekühlt wird, wie zuvor geheizt.
+\end{block}
+\vspace{0.2cm}
+Gewöhnlich wird mit $v=0,1-0,2 ^\circ$C / min geheizt.\\
+Für Gleichgewichtsschmelzkurven muss gelten 
+\begin{align*}
+t_{\text{rel}}<t_\text{exp}=\frac{\Delta T_m}{v}
+\end{align*}
+Bsp. 100-300 BP, $\Delta T_m\approx 0,3 ^\circ$C und  $v=0,002 ^\circ$C /min $\Rightarrow$ $t_{\text{rel}}<150$s\\
+\vspace{0.3cm}
+\centering Biomoleküle können sehr langsam sein.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%Zusätzlicher Teil zu möglichen Ursachen: Stem Bildung, Heterogene WW, Versuch der Verbesserung: systematische Paramtervariiation (iterativ), objektives Kriterium was offen und geschlossen heißt (reicht eine Veränderung der elektronischen Konfiguration schon aus?), was gute und schlechte Übereinstimmung heißt, einfluss chemischer Umgebung, usw...
+
+
+
+%\subsection{Statistischer Ansatz}
+%\begin{frame}
+%\frametitle{Statistischer Ansatz}
+%Theorie nach Peyrard \& Bishop mit folgenden Annahmen
+%\begin{itemize}
+%\item Auslenkung der BP aus der Gleichgewichtslage entlang H-Brücken
+%\item Zwei Freiheitsgrade $u_n$ und $v_n$ \\
+%$\Rightarrow$ $x_n=\frac{1}{\sqrt{2}}(u_v+v_n)^2$ und $y_n=\frac{1}{\sqrt{2}}(u_n-v_n)^2$
+%\item Potential der H-Brücken wird durch das Morse-Potential beschrieben
+%\item Harmonische Kopplung benachbarter Basen
+%\item Vernachlässigen von Inhomogenitäten
+%\end{itemize}
+%\begin{align*}
+%\mathcal{H}=\sum_{n} \frac12 m(\dot{x}_n^2+&\dot{y}_n^2)+ \frac12 k[(x_n-x_{n-1})^2+(y_n-y_{n-1})^2]+V(y_n)\\
+%&V(y_n)=D\cdot \left\{\exp(-a\sqrt{2} y_n)-1\right\}^2
+%\end{align*}
+%\end{frame}
+%
+%
+%
+%\begin{frame}
+%\frametitle{Statistischer Ansatz}
+%Kanonische Zustandssumme faktorisiert
+%\begin{align*}
+%Z=&\int_{-\infty}^{\infty} \prod_{n=1}^{N} \text{d}x_n\text{d}y_n \text{d}p_{{x}_n} \text{d}p_{{y}_n} \exp(-\beta \mathcal{H}(x_n,y_n))\\
+%\Rightarrow Z=&(Z_{x_{1}}\cdot Z_{y_{1}}\cdot Z_{p_{x_1}}\cdot Z_{p_{y_1}})^N
+%\end{align*}
+%Drei der Integrale sind einfach zu lösen
+%\begin{align*}
+%Z_{p_{x_1}}=Z_{p_{y_1}}=\sqrt{2\pi m k_B T} \qquad \& \qquad Z_{x_1}=\sqrt{\frac{2\pi}{\beta k}}
+%\end{align*}
+%Das Integral $Z_{y_1}$ lässt sich im TD-Limes $N\rightarrow \infty$ exakt lösen, in dem die Eigenfunktionen und Eigenwerte eines Transferintegral verwendet werden.
+%\end{frame}
+%
+%
+%
+%\begin{frame}
+%\frametitle{Statistischer Ansatz}
+%Möglichkeit der Berechnung der freien Energie und Erwartungswerten.\\
+%\vspace{0.2cm}
+%Beispielsweise die mittlere Streckung der H-Brücke
+%\begin{align*}
+%<y_m>=\frac1Z \int \prod y_m \exp(-\beta  \mathcal{H}) \text{d}x_n\text{d}y_n \text{d}p_{{x}_n} \text{d}p_{{y}_n}
+%\end{align*}
+%\vspace{0.5cm}
+%Aber auch hier gibt es Schwierigkeiten
+%\begin{itemize}
+%\item Die Parameter können nicht hinreichend genau bestimmt werden
+%\item Zwei Freiheitsgrade scheinen nicht zur Beschreibung auszureichen
+%\item Nichtlinearitäten wurden nicht berücksichtigt
+%\item Lösen von sensitiven nichtlinearen Systemen nötig
+%\end{itemize}
+%\end{frame}
+
+
+
+
+\section{Phasenübergang?!}
+
+\subsection{Grundlagen}
+ \begin{frame}
+\frametitle{Phasenübergang??}
+\begin{block}{}
+1D statistisch-mechanische Systeme mit kurzreichweitigen WW zeigen keinerlei Phasenübergänge für T>0
+\end{block}
+\vspace{0.5cm}
+\begin{itemize}
+\item Bei beinahe 1D Systemen und
+\item Systemen mit langreichweitiger WW
+\end{itemize}
+können jedoch Phasenübergänge beobachtet werden.\\
+\vspace{0.5cm}
+\centering
+$\Rightarrow$ Ursache und Ordnung des Phasenübergangs der DNA?
+\end{frame}
+
+\begin{frame}
+\frametitle{Phasenübergang!!}
+\begin{block}{Vorgehen}
+\setstretch{1.5}
+\vspace{0.3cm}
+\begin{itemize}
+\item Ableiten der Zustandssumme aus der freien Energie
+\item Bedeutung der Singularität der großkanonischen Zustandssumme
+\item Ansatz für das Necklace - Modell und dessen Bedeutung
+\item Schlussfolgerung der Ordnung des Übergangs
+\end{itemize}
+\end{block}
+\setstretch{1.0}
+\end{frame}
+
+\begin{frame}
+\small
+\vspace{0.9cm}
+Freie Energie pro Längeneinheit $f(T)$
+\begin{align*}
+f(T)=-\lim_{n\rightarrow\infty} \frac1n \ln(Z_n(T))\\
+\Rightarrow Z_n(T)=\exp(- f(T) n)
+\end{align*}
+\vspace{0.3cm}
+Für die großkanonische Zustandssumme gilt
+\begin{align*}
+G(z,T)=\sum^{\infty}_{n=0}z^n\, Z_n(T)
+\end{align*}
+mit der Fugazität $z=\exp(\beta \mu)$.\\
+\vspace{0.3cm}
+Die Reihe konvergiert für $z^nZ_n(T)<1\,\Rightarrow$Kleinste Singularität bei $z_0^nZ_n(T)=1$ 
+\begin{align*}
+z_0=\exp( f(T))\\
+f(T)=\ln(z_0)
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{\large Ordnung des Phasenübergangs}
+\small
+%Die niedrigste Singularität gibt die freie Energie des Systems vor.\\
+Gibt es mehrere Singularitäten kann es zum Phasenübergang kommen.
+Singularitäten sind Funktionen z.B  $z_0(T)$. Der Zweig der freien Energie kann gewechselt werden, da das System eine minimal freie Energie bevorzugt.\\
+\centering $\Rightarrow$ Punkt des Phasenübergangs
+\vspace{0.3cm}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.50\textwidth]{pic/energie.jpg}
+\end{figure}
+\centering
+ \textcolor{blue}{$f_1(T)$} Phasenübergang 1. Ordnung\\
+ \textcolor{red}{$f_1'(T)$} Kontinuierlicher Phasenübergang 
+\end{frame}
+
+
+\subsection{Das Necklace - Modell}
+\begin{frame}
+\frametitle{\large Anwendung des Necklace - Modells}
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.80\textwidth]{pic/Necklace.JPG}
+\end{figure}
+\centering{\small\cite{FIS84}}\\
+\vspace{0.3cm}
+\small
+Mit den kanonischen Zustandssummen $Q_n$ ergibt sich
+\begin{align*}
+G_A(z)=\sum_n Q_n^A z^n \qquad \qquad G_B(z)=\sum_n Q_n^B z^n
+\end{align*}
+Unter der Annahme, das die Ränder immer geschlossen sind gilt
+\begin{align*}
+G(z)=G_A+G_A\nu G_B\nu G_A+G_A\nu G_B\nu G_A \nu G_B \nu G_A+...
+\end{align*}
+mit $\nu$ als Gewichtungsfaktoren der Vertices
+\end{frame}
+
+\begin{frame}
+Wenn nun z hinreichend klein ist, konvergiert die Reihe zu
+\begin{align*}
+G(z)=\frac{G_A(z)}{1-\nu^2 G_A(z)G_B(z)}
+\end{align*}
+
+Außer bei den Singularitäten von
+\begin{itemize}
+\item  $G_A(z)$ und $G_B(z)$ 
+\item $\nu ^2 G_B(z)=\frac{1}{G_A(z)}$
+\end{itemize}
+\vspace{0.3cm}
+Die Ordnung des Phasenübergangs erhält man durch einen konkreten Ansatz für $Q_A$ und $Q_B$.
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Der Ansatz}
+\small Geschlossener Zustand: fester Energiebetrag pro Bindung, kein Entropiebeitrag
+\begin{align*}
+Q_A^n=u^n\qquad \qquad u=\exp(-\beta \epsilon)
+\end{align*}
+
+\vspace{0.15cm}
+\small Offener Zustand: Keine Bindungsenergie, rein entropischer Beitrag
+\begin{align*}
+Q_B^n=\frac{q_0 w^n}{n^\Psi} \qquad \qquad w=\exp(-\sigma_o(T))
+\end{align*}
+\begin{itemize}
+\item Vergleich des Ansatzes mit dem BP-Modell:\\
+Die Faktoren $u$ und $w$ spiegeln den Stabilitätsparameter $s_k$ wider.\\
+Das Necklace-Modell berücksichtigt keine Sequenzabhängigkeit $\Rightarrow s_k=\text{C}$.\\
+$\sigma_l \,=\, \sigma_0 l^{-c}\; \hat{=}\; q_o n^{-\Psi}$ beschreibt die Loop-Entropie.\\
+\item $\Psi$ ermöglicht die Anpassung der Möglichkeiten an gegebene Bedingungen\\
+Loop: Random-Walk mit Rückkehr und Selbstvermeidung.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{\large Ordnung des Phasenübergangs}
+\begin{align*}
+G_B(z)=\sum_n \frac{q_o (wz)^n}{n^\Psi}
+\end{align*}
+\centering
+Das Konvergenzverhalten bei $wz\rightarrow 1$ hängt von $\Psi$ ab.\\
+\vspace{0.3cm}
+Untersuchung: Schnittpunkt der Singularitäten von $G(z)$ bei $wz\rightarrow1$
+
+\vspace{0.3cm}
+\begin{block}{Zusammenfassung der Ergebnisse}
+\begin{itemize}
+\item $\Psi \leq1\qquad\qquad$$G_B(z)$ und $G(z)$ divergieren
+\item $1<\Psi<2\qquad$  Kontinuierlicher Phasenübergang
+\item $\Psi>2\qquad\qquad$ Phasenübergang 1. Ordnung
+\end{itemize}
+\end{block}
+\vspace{0.3cm}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Zurück zur DNA..}
+Für einen Random-Walk in 3D, welcher zurückkehrt, ergibt sich $\Psi=1,5$.\\
+Jedoch steigt $\Psi$ unter Berücksichtigung von
+\begin{itemize}
+\item Selbstvermeidung des Loops
+\item Vermeidung benachbarter Loops
+\item Sequenzabhängigkeit der Stabilität
+\item Stem-Bildung
+\end{itemize}
+\begin{block}{}
+Für DNA ergibt sich ein Phasenübergang 1. Ordnung
+\end{block}
+Der Faktor $n^{-\Psi}$ kann als langreichweitige WW verstanden werden.
+\begin{itemize}
+\item Dies erklärt die Existenz eines Phasenübergangs dieses "`1D"' Systems
+\item Zeigt die Grenzen eines Ising-artigen Modells
+\end{itemize}
+\end{frame}

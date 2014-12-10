@@ -1,0 +1,225 @@
+%\documentclass[10pt,landscape,handout]{beamer}
+%\documentclass[10pt,landscape,draft]{beamer}
+\documentclass[10pt,landscape,xcolor=dvipsnames]{beamer}
+
+
+% Be able to directly input German Umlauts etc.
+%\usepackage[latin1]{inputenc}
+
+% Font encoding:
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{german}
+\usepackage{ragged2e}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
+\definecolor{white}{rgb}{1.0,1.0,1.0}
+
+\newif\ifplacelogo % create a new conditional
+\placelogotrue
+
+\usepackage{units}
+\usepackage[absolute,verbose,overlay]{textpos}
+
+\newcommand{\poslogo}{%
+  \setlength{\TPHorizModule}{364pt}
+  \setlength{\TPVertModule}{273pt}}
+  
+
+
+
+% setup beamer style to use TUDo Theme
+\mode<presentation>
+{
+  \usetheme{TUDortmund}
+}
+
+% Include intermediate TOCs automatically.
+% Completely pointless for these slides, however
+%\AtBeginSection[]
+%{
+%  \begin{frame}<beamer>
+%    \frametitle{\"Ubersicht}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+%}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{}[frame number] 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Basic information
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title[]{Transmissionselektronenmikroskopie}
+
+\subtitle{Seminarvortrag}
+
+\author{Markus Stabrin}
+
+\institute[Fakult\"at f\"ur Physik, TU Dortmund]{Fakult\"at f\"ur Physik\\ Technische Universit\"at Dortmund}
+\date{11. Dezember 2014}
+
+
+
+\begin{document}
+\setlength{\parskip}{1mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% use logo for title slide
+
+% \logo{\ifplacelogo \includegraphics[width = 5cm]%{pic/Bild30}\hspace{3.75cm}\fi}
+
+
+% slide options are: alignment: c(enter) or t(op), label
+%\afterpage{%
+\begin{frame}[c,label=titlepage]
+  \titlepage
+\end{frame}
+
+% \begin{frame}
+%   \frametitle{Inhaltsübersicht}
+% 	\begin{minipage}{6cm}
+%   \setcounter{tocdepth}{2}
+% 	\footnotesize{
+%   \tableofcontents}
+% 	\end{minipage}
+% 	\begin{minipage}{3cm}
+		
+% 	\begin{figure}
+% 		\centering
+% 			\includegraphics[width=5cm]{pic/Bild1.png}
+% 	\end{figure}
+	
+% 	\end{minipage}
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Overview
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% turn off logo for remaining slides (just draws away focus from content)
+%\logo{}
+
+%\begin{frame}[t, label=overview]
+  %\frametitle{\"Ubersicht}
+  %\setcounter{tocdepth}{2}
+  %\tableofcontents
+%\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Global structure is declared through the usual section and 
+%%% subsection environments. Starred sections will not appear in the 
+%%% auto-generated TOCs.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{inhalt/epa}
+
+
+% \include{topics/Biochem}
+% \input{topics/Schmelz}
+% \input{topics/Theorie}
+% \input{topics/Ende}
+%\begin{frame}[c]
+%\frametitle{Literatur}
+%\nocite{*}
+%\bibliographystyle{alphadin}
+%\bibliography{literatur}
+%\end{frame}
+
+\section*{Anhang}
+\begin{frame}
+\frametitle{Literaturverzeichnis}
+\vspace{0.2cm}
+\begin{thebibliography}{999}
+\tiny{
+\bibitem[]{} \textcolor{black}{\textsc{Boisset, N. and Mouche, F.}, \textit{'Sepia officinalis hemocyanin: A Refined 3D Structure from field emission gun cryoelectron microscopy'}, Journal of Molecular
+Biology, Vol. 296(2):459-572 (2000)} 
+\bibitem[]{} \textcolor{black}{\textsc{Gatsogiannis, C.}, \textit{'3D Strukturanalyse von Molluskenhämocyaninen
+aus elektronenmikrokopischen Bildern'}, Doktorarbeit, Johannes Gutenberg Universität
+Mainz (2009)} 
+\bibitem[]{} \textcolor{black}{\textsc{Hübler, R.}, \textit{'Charakterisierung und Stabilität von Arthropoden-
+Hämocyanin'}, Doktorarbeit, Johannes Gutenberg Universität
+Mainz (2001)} 
+\bibitem[]{} \textcolor{black}{\textsc{Lamy, J., You, V., Taveau, J.-C., Boisset, N., and Lamy, J.}, \textit{'Intramolecular Localization of the Functional Units of Sepia officinalis Hemocyanin by Immunoelectron
+Microscopy'}, Journal of Molecular Biology, Vol. 284:1051-1074 (1998)} 
+\bibitem[]{} \textcolor{black}{\textsc{Li, X., Mooney, P., Zheng, S., Booth, C., Braunfeld, M., Gubbens, S., Agard,
+D., and Cheng, Y.}, \textit{'Electron counting and beam-induced motion correction enable
+near-atomic-resolution single-particle cryo-EM'}, Nature Methods, Vol. 10(6):584-593 (2013)} 
+\bibitem[]{} \textcolor{black}{[] \textsc{Markl, J.}, \textit{'Evolution of molluscan hemocyanin structures'}, Biochimica et
+Biophysica Acta, Vol. 1834(9):1840-1852. (2013)}
+
+\bibitem[]{} \textcolor{black}{\textsc{Penczek, P.}, \textit{'Fundamentals of three-dimensional reconstruction from projections'}, Methods Enzymol, Vol. 482:1-33 (2010)} 
+}
+\end{thebibliography}
+\end{frame}
+
+\begin{frame}
+\frametitle{Bilderverzeichnis}
+\begin{thebibliography}{999}
+\tiny{
+\bibitem[]{} \textcolor{black}{[MPI Logo] \textsc{}, \textit{'http://www.mpi-dortmund.mpg.de/'}, 18.9.14}
+\bibitem[HAE01]{HAE01} \textcolor{black}{[HAE01] \textsc{}, \textit{'http://www.sjoharen.com/gallery/fprw/sjoharen/1293\_m.JPG'}, 18.9.14}
+\bibitem[HAE02]{HAE02} \textcolor{black}{[HAE02] \textsc{Markl, J.}, \textit{'Evolution of molluscan hemocyanin structures'}, Biochimica et
+Biophysica Acta, Vol. 1834(9):1840-1852. (2013)}
+\bibitem[HAE03]{HAE03} \textcolor{black}{[HAE03] \textsc{Cuff, M., Miller, K., van Holde, K., and Hendrickson, W.}, \textit{'Crystal structure of a functional unit from Octopus hemocyanin'}, Journal of Molecular Biology, Vol.
+278(4):855-870 (1998)} 
+\bibitem[HAE04]{HAE04} \textcolor{black}{[HAE04] \textsc{Boisset, N. and Mouche, F.}, \textit{'Sepia officinalis hemocyanin: A Refined 3D Structure from field emission gun cryoelectron microscopy'}, Journal of Molecular
+Biology, Vol. 296(2):459-572 (2000)} 
+
+\bibitem[TEM01]{TEM01} \textcolor{black}{[TEM01] \textsc{}, \textit{'[http://ruby.chemie.uni-freiburg.de/Vorlesung/SVG/Methoden\_ac/tem2.svg'}, 18.9.2014} 
+\bibitem[TEM02]{TEM02} \textcolor{black}{[TEM02] \textsc{}, \textit{'http://raunser-lab.de/Raunser/Equipment.html'}, 18.9.2014} 
+
+\bibitem[EPA01]{EPA01} \textcolor{black}{[EPA01] \textsc{Frank, J.}, \textit{'Single-particle imaging of macromolecules by cryo-electron microscopy'}, Annu Rev Biophys Biomol Struct, Bd. 31, S. 303–19 (2002)} 
+\bibitem[EPA02]{EPA02} \textcolor{black}{[EPA02] \textsc{Behrmann, E.}, \textit{'Structure of the Actin/Tropomyosin/Myosin Rigor Complex as Revealed
+by Cryo-Electron Microscopy'}, Dissertation (2012)} 
+}
+\end{thebibliography}
+\end{frame}
+
+%\input{topics/Anhang}
+
+\section*{Danksagung}
+
+\begin{frame}
+	\frametitle{Danksagung}
+	\textbf{Prof. Dr. Metin Tolan},\\ 
+	für die Möglichkeit am MPI zu schreiben.
+
+	\textbf{Prof. Dr. Stefan Raunser},\\
+	für die Möglichkeit bei ihm in der Gruppe schreiben zu dürfen.
+
+	\textbf{Julian von der Ecken \& Dr. Christos Gatsogiannis},\\
+	für die erstklassige Betreuung.
+
+	\textbf{Dr. Oliver Hofnagel},\\
+	für die großartige Unterstützung am Mikroskop.
+
+	\textbf{Sabrina Pospich},\\
+	für unzählige Stunden der Korrektur und Anregung.
+
+	\centering
+	... und allen anderen für die angenehme Atmosphäre!!!
+\end{frame}
+
+\placelogotrue
+\begin{frame}
+\hspace{3cm}
+	\begin{block}
+		\centering
+		\huge Vielen Dank für Ihre Aufmerksamkeit!
+	\end{block}
+	\begin{figure}
+		\includegraphics[width = 6.5cm]{pic/epa/lol}
+	\end{figure}
+\end{frame}
+
+\end{document}
